@@ -61,7 +61,7 @@ button:hover{
 }
 
 .illustration-container{
-    margin-top: 75px;
+    margin-top: 200px;
     background-color: rgb(67, 171, 255);
     width: 400px;
     height: 400px;
@@ -69,14 +69,21 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: auto;
 }
 .illustration-img-cont{
     margin-top: 100px;
+    padding-top: 30px;
     width: 400px;
     height: 400px;
+    /* margin: auto; */
 }
 #tagline{
-    margin-top: 200px;
+    margin-top: 50px;
+    padding-bottom: 30px;
     font-size: 32px;
     color: white;
+    padding-left: 40px;
+    text-align: center;
+    padding-right: 40px;
 }

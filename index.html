@@ -13,9 +13,13 @@
             </div>
             <div class="form-container">
                 <span>Login and enjoy<span style="color: #099dfd"> unlimited </span> video calling</span>
-                <input type="text" id="username" placeholder="Username">
+                <form action="./index.html" onsubmit="return clicky()">
+                <input type="text" id="email" placeholder="Email">
+                <span class="warning" id="emailWarning">Incorrect Email</span>
                 <input type="password" id="password" placeholder="Password">
-                <button>Submit</button>
+                <span class="warning"id="passwordWarning">Password must be at least 8 characters</span>
+                <button id = "submitButton">Submit</button>
+                </form>
             </div>
             
         </div>
@@ -29,6 +33,35 @@
             <div id="tagline">
                 <span>Chat with your <strong>closest friends</strong> no matter how far they are</span>
             </div>
+            <script>
+                function clicky(){
+                    let email = document.getElementById("email").value
+                    let password = document.getElementById("password").value
+                    
+                    if(email.match(/\S+@\S+/)){
+                        
+                        if(password.value.length >= 8){
+                            document.getElementById("password").className = ""
+                            return true
+                        } else {
+                            document.getElementById("password").className = "incorrect"
+                            return false
+                        }
+                    } else{
+                        document.getElementById("email").className = "incorrect"
+                        document.getElementById("emailWarning").style = "display: block"
+                        
+                        if(password.length >= 8){
+                            document.getElementById("password").className = ""
+                            return true
+                        } else {
+                            document.getElementById("password").className = "incorrect"
+                            document.getElementById("passwordWarning").style = "display: block"
+                            return false
+                    }
+                    return false
+                }
+            </script>
         </div>
     </body>
 </html>

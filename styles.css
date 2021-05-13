@@ -45,6 +45,15 @@ input{
     padding-left: 5px;
 }
 
+.incorrect{
+    border: 2px solid red;
+}
+.warning{
+    font-size: 15px;
+    color: red;
+    display: none;
+}
+
 button{
     margin-top: 20px;
     border: none;
